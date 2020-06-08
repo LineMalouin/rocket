@@ -468,28 +468,28 @@
             Number of floors: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="floorsNbrHYB" min="0"
                 oninput="this.value = Math.abs(this.value)"><br>
             Number of basements: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="basementsNbrHYB"><br>
-            Number of available parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrHYB"
+            Number of parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrHYB"
                 min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of separate businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
+            Number of businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
                 name="seperateBusinessesNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Maximum amount of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
                 name="occupantsPerFloorNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Active/busy hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value > 24) document.getElementById('number24').value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
+            Active hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value > 24) document.getElementById('number24').value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <div id="hybridDiv">
             Number of floors: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="floorsNbrHYB" min="0"
                 oninput="this.value = Math.abs(this.value)"><br>
             Number of basements: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="basementsNbrHYB"><br>
-            Number of available parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrHYB"
+            Number of parking spaces: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="parkingsNbrHYB"
                 min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Number of separate businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
+            Number of businesses: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
                 name="seperateBusinessesNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Maximum amount of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
                 name="occupantsPerFloorNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Active/busy hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value > 24) document.getElementById('number24').value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
+            Active hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value > 24) document.getElementById('number24').value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <br>
-        Recommended amount of elevators: <input placeholder="0" id="recommendedShafts" value="0" type="number"
+        Amount of elevators recommended: <input placeholder="0" id="recommendedShafts" value="0" type="number"
             disabled><br>
         Select an elevator range<br>
         <input type="radio" name="quality" onchange="setRecommendedShafts(), setPrices();" value="standard">Standard
