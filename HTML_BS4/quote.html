@@ -298,7 +298,7 @@
                     else document.getElementById("recommendedShafts").value = Math.ceil(shafts);
                     break;
                 case "corporate":
-				var buildingLetter = buildingType.toUpperCase().slice(0, 3);
+                var buildingLetter = buildingType.toUpperCase().slice(0, 3);
                     var maxOccupants = parseInt(document.getElementsByName("occupantsPerFloorNbr" + buildingLetter)[0].value);
                     var floorsNbr = parseInt(document.getElementsByName("floorsNbr" + buildingLetter)[0].value);
                     var totalOccupantsPerFloor = maxOccupants * floorsNbr;
@@ -315,7 +315,9 @@
                         document.getElementById("recommendedShafts").value = Math.ceil(totalElevators);
                     }
                     if (floorsNbr < 2 && basementsNbr < 1) document.getElementById("recommendedShafts").value = 0;
+                    else document.getElementById("recommendedShafts").value = Math.cell(shafts);
                     break;
+                
                 case "hybrid":
                     var buildingLetter = buildingType.toUpperCase().slice(0, 3);
                     var maxOccupants = parseInt(document.getElementsByName("occupantsPerFloorNbr" + buildingLetter)[0].value);
@@ -440,7 +442,7 @@
             <option name="hybrid" value="hybrid">Hybrid</option>
         </select><br><br>
         <img class="center" id="residential" src="demo_files/images/thematics/construction/c1-min.png" alt="product image" width="400">
-        <img class="center" id="commercial" src="demo_files/images/thematics/construction/c2-min.jpeg" alt="product image" width="400">
+        <img class="center" id="commercial" src="demo_files/images/thematics/construction/red_elevator.png" alt="product image" width="400">
         <img class="center" id="corporate" src="demo_files/images/ascenseur-commercial.jpg" alt="product image" width="400">
         <img class="center" id="hybrid" src="demo_files/images/ascenseur-commercial.jpg" alt="product image" width="400">
         <div id="residentialDiv">
@@ -474,7 +476,7 @@
                 name="seperateBusinessesNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
             Maximum amount of occupants per floor: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number"
                 name="occupantsPerFloorNbrHYB" min="0" oninput="this.value = Math.abs(this.value)"><br>
-            Active hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value > 24) document.getElementById('number24').value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
+            <br>
         </div>
         <div id="hybridDiv">
             Number of floors: <input placeholder="0" id="number" type="number" onchange="setRecommendedShafts(), setPrices()" name="floorsNbrHYB" min="0"
