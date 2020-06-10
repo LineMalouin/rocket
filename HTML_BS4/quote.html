@@ -140,6 +140,7 @@
 			position: fixed;
 		}
     </style>
+    <!--SECTION FUNCTION-->
     <script lang="javascript">
         function numberWithCommas(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -367,7 +368,7 @@
 
 						<!-- Logo -->
 						<a class="logo float-left scrollTo" href="#top">
-							<img src="assets/images/_smarty/logo_dark.png" alt="" />
+							<img src="assets/images/_smarty/logo_dark.png" alt="company logo" />
 						</a>
 
 						<!-- 
@@ -433,6 +434,7 @@
     <form id="form">
         <p style="font-size: 35px; font-style: bold;">Get a Quote</p>
         <p style="font-size: 20px;">Tell us what you need</p>
+    <!--BUILDING TYPE SELECT AND SECTION OF WHAT WILL APPEAR WHEN THE CHOICE IS MAKE-->
         <br>Select a type of building<br>
         <select class="form-select" onchange="inputs(this.value);" name="building-type-select" id="buildingSelect">
             <option name="empty" id="optionID" value="empty" selected disabled hidden>-</option>
@@ -445,6 +447,7 @@
         <img class="center" id="commercial" src="demo_files/images/thematics/construction/red_elevator.png" alt="product image" width="400">
         <img class="center" id="corporate" src="demo_files/images/thematics/construction/corporate.jpeg" alt="product image" width="400">
         <img class="center" id="hybrid" src="demo_files/images/thematics/construction/hybride.jpg" alt="product image" width="400">
+        <!--INFORMATIONS THE CLIENT MUST COMPLETE-->
         <div id="residentialDiv">
             Number of appartments: <input placeholder="0" id="number" onchange="setRecommendedShafts(), setPrices()" type="number" name="appartmentsNbrRES" min="0"
                 oninput="this.value = Math.abs(this.value)"><br>
@@ -491,6 +494,7 @@
             Active hours: <input placeholder="0" id="number24" type="number" onchange="if (this.value > 24) document.getElementById('number24').value = 24;" name="busyHoursNbrHYB" min="0" max="24" oninput="this.value = Math.abs(this.value)"><br>
         </div>
         <br>
+        <!--SELECTOR OF THE RANGE-->
         Amount of elevators recommended: <input placeholder="0" id="recommendedShafts" value="0" type="number"
             disabled><br>
         Select an elevator range<br>
@@ -502,6 +506,7 @@
         </option><br><br>
         </select>
     </form>
+    <!--DISPLAY THE PRICE AND TOTAL COST-->
     <div style="text-align: center;">
         Price for 1 elevator unit: <input id="priceUnit" placeholder="$0" type="text" disabled><br>
         Installation costs: <input id="costInstallations" placeholder="$0" type="text" disabled><br>
