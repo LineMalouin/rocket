@@ -224,22 +224,22 @@
 					break;
 					
                 case "corporate":
-					var buildingLetter = buildingType.toUpperCase().slice(0, 3);
-                    var maxOccupants = parseInt(document.getElementsByName("occupantsPerFloorNbr" + buildingLetter)[0].value);
-                    var floorsNbr = parseInt(document.getElementsByName("floorsNbr" + buildingLetter)[0].value);
-                    var totalOccupantsPerFloor = maxOccupants * floorsNbr;
-                    var totalShafts = Math.floor(totalOccupantsPerFloor / 1000);
-                    var basementsNbr = parseInt(document.getElementsByName("basementsNbr" + buildingLetter)[0].value);
-                    var totalStories = floorsNbr + basementsNbr;
-                    var elevatorCollumns = Math.floor(totalStories / 20);
-                    	if (elevatorCollumns < 1) elevatorCollumns = 1;
-                    var totalElevators = Math.round(totalShafts / elevatorCollumns);
+					//var buildingLetter = buildingType.toUpperCase().slice(0, 3);
+                   // var maxOccupants = parseInt(document.getElementsByName("occupantsPerFloorNbr" + buildingLetter)[0].value);
+                   // var floorsNbr = parseInt(document.getElementsByName("floorsNbr" + buildingLetter)[0].value);
+                    //var totalOccupantsPerFloor = maxOccupants * floorsNbr;
+                   // var totalShafts = Math.floor(totalOccupantsPerFloor / 1000);
+                    //var basementsNbr = parseInt(document.getElementsByName("basementsNbr" + buildingLetter)[0].value);
+                    //var totalStories = floorsNbr + basementsNbr;
+                    //var elevatorCollumns = Math.floor(totalStories / 20);
+                    //	if (elevatorCollumns < 1) elevatorCollumns = 1;
+                    //var totalElevators = Math.round(totalShafts / elevatorCollumns);
                     
-                    var priceTotal = numberWithCommas(((result * totalElevators) + fee).toFixed(2))
-                    	if (totalElevators === 0) priceTotal = 0;
-					document.getElementById("costTotal").value = "$" + priceTotal.toString().replace(/NaN/g, "0");
+                    //var priceTotal = numberWithCommas(((result * totalElevators) + fee).toFixed(2))
+                    //	if (totalElevators === 0) priceTotal = 0;
+					//document.getElementById("costTotal").value = "$" + priceTotal.toString().replace(/NaN/g, "0");
 					
-					break;
+					//break;
 					
                 case "hybrid":
                     var buildingLetter = buildingType.toUpperCase().slice(0, 3);
@@ -298,25 +298,25 @@
                     else document.getElementById("recommendedShafts").value = Math.ceil(shafts);
                     break;
                 case "corporate":
-                var buildingLetter = buildingType.toUpperCase().slice(0, 3);
-                    var maxOccupants = parseInt(document.getElementsByName("occupantsPerFloorNbr" + buildingLetter)[0].value);
-                    var floorsNbr = parseInt(document.getElementsByName("floorsNbr" + buildingLetter)[0].value);
-                    var totalOccupantsPerFloor = maxOccupants * floorsNbr;
-                    var totalShafts = Math.floor(totalOccupantsPerFloor / 1000);
-                    var basementsNbr = parseInt(document.getElementsByName("basementsNbr" + buildingLetter)[0].value);
-                    var totalStories = floorsNbr + basementsNbr;
-                    var elevatorCollumns = Math.floor(totalStories / 20);
-                    if (elevatorCollumns < 1) elevatorCollumns = 1;
-                    var totalElevators = Math.round(totalShafts / elevatorCollumns);
+                //var buildingLetter = buildingType.toUpperCase().slice(0, 3);
+                    //var maxOccupants = parseInt(document.getElementsByName("occupantsPerFloorNbr" + buildingLetter)[0].value);
+                    //var floorsNbr = parseInt(document.getElementsByName("floorsNbr" + buildingLetter)[0].value);
+                    //var totalOccupantsPerFloor = maxOccupants * floorsNbr;
+                    //var totalShafts = Math.floor(totalOccupantsPerFloor / 1000);
+                    //var basementsNbr = parseInt(document.getElementsByName("basementsNbr" + buildingLetter)[0].value);
+                    //var totalStories = floorsNbr + basementsNbr;
+                    //var elevatorCollumns = Math.floor(totalStories / 20);
+                    //if (elevatorCollumns < 1) elevatorCollumns = 1;
+                    //var totalElevators = Math.round(totalShafts / elevatorCollumns);
 
-                    if (isNaN(totalElevators) || isNaN(totalShafts)) return;
-                    else {
-                        document.getElementById("recommendedShafts").value = Math.ceil(totalShafts);
-                        document.getElementById("recommendedShafts").value = Math.ceil(totalElevators);
-                    }
-                    if (floorsNbr < 2 && basementsNbr < 1) document.getElementById("recommendedShafts").value = 0;
-                    else document.getElementById("recommendedShafts").value = Math.cell(shafts);
-                    break;
+                    //if (isNaN(totalElevators) || isNaN(totalShafts)) return;
+                    //else {
+                        //document.getElementById("recommendedShafts").value = Math.ceil(totalShafts);
+                      //  document.getElementById("recommendedShafts").value = Math.ceil(totalElevators);
+                    //}
+                   // if (floorsNbr < 2 && basementsNbr < 1) document.getElementById("recommendedShafts").value = 0;
+                    //else document.getElementById("recommendedShafts").value = Math.cell(shafts);
+                   // break;
                 
                 case "hybrid":
                     var buildingLetter = buildingType.toUpperCase().slice(0, 3);
@@ -354,7 +354,7 @@
 <div class="enable-animation">
     <!-- wrapper -->
     <div id="wrapper">
-        <div id="header" style="background-color:blanchedalmond;" class="navbar-toggleable-md sticky header-md clearfix">
+        <div id="header" style="background-color:rgb(255, 255, 255);" class="navbar-toggleable-md sticky header-md clearfix">
 
             <!-- TOP NAV -->
             <header id="topNav">
@@ -508,7 +508,19 @@
         Total cost: <input id="costTotal" placeholder="$0" type="text" disabled><br>
     </div>
 
+    
+<!-- BUTTON CALLOUT -->
+<a href="index-onepage-construction.html#contact" class="btn btn-xlg btn-primary fs-20 fullwidth m-0 rad-0 p-40">
+    <span class="font-lato fs-30">
+        Did <strong>ROCKET ELEVATORS</strong> convince you? 
+        <strong>Contact us &raquo;</strong>
+    </span>
+</a>
+<!-- /BUTTON CALLOUT -->
+
+
     <div class="h-100"></div>
+    
 
     <!-- FOOTER -->
 			<footer id="footer">
